@@ -1,0 +1,24 @@
+def count_winners(num_game, winner):
+    anton = ""
+    danik = ""
+
+    for i in winner:
+        if i == "A":
+            anton += "A"
+        else:
+            danik += "D"
+
+    if len(anton) > len(danik):
+        return "Anton"
+    elif len(anton) < len(danik):
+        return "Danik"
+    else:
+        return "Friendship"
+
+
+# Input
+num_game = int(input())
+winner = input().upper()
+
+# Output result
+print(count_winners(num_game, winner))
