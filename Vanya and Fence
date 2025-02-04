@@ -1,0 +1,17 @@
+# Read the number of friends and fence height in one line
+num_friends, fence_height = map(int, input().split())
+
+# Read the heights of each friend in a second line
+heights = list(map(int, input().split()))
+
+
+def possible_width ():
+    width = 0
+    for i in heights:
+        if i > fence_height:
+            width += 2
+        else:
+            width += 1
+    print(width)
+
+possible_width()
