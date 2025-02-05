@@ -1,0 +1,9 @@
+matrix = [list(map(int, input().split())) for _ in range(5)]
+for i in range(5):
+    for k in range(5):
+        if matrix[i][k] == 1:
+            row, colum = i, k
+            break
+
+moves = abs(row - 2) + abs(colum - 2)
+print(moves)
