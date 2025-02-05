@@ -1,0 +1,10 @@
+question_num = int(input())
+
+sure  = 0
+for i in range (0 , question_num):
+    a , b , c = map(int, input().split()) #inputs are only 0 or 1
+    sum = a + +b +c
+    if (sum >= 2):
+        sure +=1
+
+print (sure)
