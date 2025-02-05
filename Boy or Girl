@@ -1,0 +1,17 @@
+user_name = input().lower()
+
+def check():
+    characters = []
+    for i in user_name:
+        if i not in characters:
+            characters.append(i)
+    return characters
+
+def choose(char):
+    if len(char) % 2 == 0:
+        print("CHAT WITH HER!")
+    else:
+        print("IGNORE HIM!")
+
+unique_chars = check()
+choose(unique_chars)
