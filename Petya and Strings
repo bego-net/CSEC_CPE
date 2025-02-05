@@ -1,0 +1,13 @@
+first_string = input().upper()
+second_string = input().upper()
+
+
+for i in range(0 , len(first_string)):
+    if first_string[i] < second_string[i]:
+        print(-1)
+        break
+    elif first_string[i] > second_string[i]:
+        print(1)
+        break
+
+else:print(0)
