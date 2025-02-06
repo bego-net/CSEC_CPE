@@ -1,0 +1,20 @@
+word = input()
+
+def compare(word):
+    lower = 0
+    upper = 0
+    for i in word:
+        if i.islower():
+            lower += 1
+        elif i.isupper():
+            upper += 1
+    return upper, lower 
+
+def change(word, upper, lower):
+    if upper > lower:
+        print(word.upper())
+    else:
+        print(word.lower())
+
+upper, lower = compare(word)  
+change(word, upper, lower)  
