@@ -1,0 +1,13 @@
+num_magnet = int(input())
+magnets = []
+for i in range(num_magnet):
+    magnet = input()
+    magnets.append(magnet)
+groups = 0
+for i in range(num_magnet - 1):
+    if (magnets[i] != magnets[i+1]):
+        groups += 1
+print(groups+1)
+
+
+
