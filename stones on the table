@@ -1,0 +1,8 @@
+stone_num = int(input())
+color_stone = input().strip().upper()
+take = 0
+for i in range(0 , stone_num -1):
+    if color_stone[i] == color_stone[i+1]:
+        take += 1
+
+print(take)
