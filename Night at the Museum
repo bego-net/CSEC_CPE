@@ -1,0 +1,16 @@
+import string
+
+name = input().lower()  
+alphabet = string.ascii_lowercase  # 'abcdefghijklmnopqrstuvwxyz'
+
+total_rotation = 0  
+current_position = 0 
+
+for letter in name:
+    target_position = alphabet.index(letter)  
+    forward_steps = abs(target_position - current_position) 
+    backward_steps = 26 - forward_steps  
+    total_rotation += min(forward_steps, backward_steps)
+    current_position = target_position
+
+print(total_rotation)
