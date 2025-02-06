@@ -1,0 +1,16 @@
+num_matches = int(input())
+the_same = 0
+
+home_uniform = []
+guest_uniform = []
+
+for _ in range(num_matches):
+    home, guest = map(int, input().split())
+    home_uniform.append(home)
+    guest_uniform.append(guest)
+
+for home in home_uniform:
+    if home in guest_uniform:
+        the_same += guest_uniform.count(home)
+
+print(the_same)
