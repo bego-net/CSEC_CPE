@@ -1,0 +1,16 @@
+a, b, c, d = map(int, input().split())
+game = input()
+
+total_calories = 0
+
+for i in game:
+    if i == '1':
+        total_calories += a
+    elif i == '2':
+        total_calories += b
+    elif i == '3':
+        total_calories += c
+    elif i == '4':
+        total_calories += d
+
+print(total_calories)
