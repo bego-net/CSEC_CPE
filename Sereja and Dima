@@ -1,0 +1,20 @@
+card_num = int(input())
+cards = list(map(int, input().split()))
+
+sereja_score, dima_score = 0, 0
+continues = True
+
+while cards: #The loop continues until cards is empty.
+    if cards[0] > cards[-1]:
+        chosen_card = cards.pop(0)
+    else:
+        chosen_card = cards.pop()
+
+    if continues:
+        sereja_score += chosen_card
+    else:
+        dima_score += chosen_card
+
+    continues = not continues  
+
+print(sereja_score, dima_score)
