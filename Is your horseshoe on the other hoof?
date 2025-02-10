@@ -1,0 +1,10 @@
+shoe = list(map(int, input().split()))  # Convert input to a list of integers
+buy = 0
+buy_shoe = []
+for i in shoe:
+    if(i not in buy_shoe):
+        buy_shoe.append(i)
+    else:
+         buy +=1
+
+print(buy)
