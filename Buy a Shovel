@@ -1,0 +1,17 @@
+price , coin = map(int, input().split())
+
+cost = price
+n = 1
+cont = True
+while (cont):
+    rem = price % 10
+
+    if (rem == coin or rem == 0):
+        print(n)
+        cont=False
+
+    else:
+        n += 1
+        price += cost
+
+
