@@ -1,0 +1,15 @@
+import math
+
+y, w = map(int, input().split())  
+die = [1, 2, 3, 4, 5, 6]  
+dot = 0
+maxi = max(y, w) 
+
+for i in die:
+    if i >= maxi:
+        dot += 1
+gcd = math.gcd(dot, 6)
+num = dot // gcd
+den = 6 // gcd
+
+print(f"{num}/{den}") 
