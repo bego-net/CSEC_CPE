@@ -1,0 +1,21 @@
+wires_num = int(input())
+birds_num = list(map(int, input().split()))
+shots = int(input())
+
+for _ in range(shots):
+    x, y = map(int, input().split())
+
+    x -= 1
+
+    left_birds = y - 1
+    right_birds = birds_num[x] - y  
+
+    if x > 0:
+        birds_num[x - 1] += left_birds
+
+    if x < wires_num - 1:
+        birds_num[x + 1] += right_birds
+
+    birds_num[x] = 0
+for birds in birds_num:
+    print(birds)
