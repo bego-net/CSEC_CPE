@@ -1,0 +1,17 @@
+n = int(input())
+app = []
+for i in range(n):
+    word = input()
+    if (len(word) < 11 ):
+        app.append(word)
+    else:
+        new = ""
+
+        new += (word[0])
+        m = len(word)
+        new += str(m-2)
+        new += word[m-1]
+        app.append(new)
+
+for i in app:
+    print(i)
